@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <Name>Janitorr-Official</Name>
+    <Name>Janitorr</Name>
     <Repository>ghcr.io/schaka/janitorr:native-stable</Repository>
     <Registry>https://github.com/Schaka/janitorr</Registry>
     <Network>bridge</Network>
@@ -18,7 +18,7 @@ Before updating, please make sure your config matches the latest config template
 The official Unraid App for Janitorr published by its developer.
     </Description>
     <Category>MediaApp:Video MediaServer:Video Other: Tools: Status:Stable</Category>
-    <Icon>https://raw.githubusercontent.com/Schaka/janitorr/main/logos/janitorr_icon.png</Icon>
+    <Icon>https://raw.githubusercontent.com/Schaka/janitorr/main/images/logos/janitorr_icon.png</Icon>
     <TemplateURL>https://raw.githubusercontent.com/Schaka/unraid-templates/main/janitorr.xml</TemplateURL>
     <Requires>
 Before you can start using Janitorr, please make sure to read the README at https://github.com/Schaka/janitorr &#xD;
