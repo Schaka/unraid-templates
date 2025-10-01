@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>Janitorr</Name>
-    <Repository>ghcr.io/schaka/janitorr:native-stable</Repository>
+    <Repository>ghcr.io/schaka/janitorr:jvm-stable</Repository>
     <Registry>https://github.com/Schaka/janitorr</Registry>
     <Network>bridge</Network>
     <Shell>bash</Shell>
     <Privileged>false</Privileged>
     <Support>https://forums.unraid.net/topic/172461-support-janitorr/</Support>
     <Project>https://github.com/Schaka/janitorr</Project>
-    <ExtraParams>--user 99:100</ExtraParams>
+    <ExtraParams>--user 99:100 --memory=256m</ExtraParams>
     <PostArgs/> 
     <Overview>    
 Cleans your Radarr, Sonarr, Jellyseerr and Jellyfin or Emby before you run out of space on your server. &#xD;
@@ -26,7 +26,8 @@ It's important you understand how directories need to be mapped, so Janitorr see
 You need to create the application.yml file under /mnt/user/appdata/janitorr/config/application.yml before Janitorr can start up. &#xD;
 The config template linked in the README contains all necessary config options and documentation. It is recommended to update this before manually before updating your Janitorr version. &#xD;
     </Requires>
-    <Config Name="application.yml path" Target="/workspace/application.yml" Default="" Mode="rw" Description="Where the config file will be stored" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/janitorr/config/application.yml</Config>
+    <Config Name="application.yml path" Target="/config/application.yml" Default="" Mode="rw" Description="Where the config file will be stored" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/janitorr/config/application.yml</Config>
     <Config Name="logs path" Target="/logs" Default="" Mode="rw" Description="Where your files will be written, if enabled" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/janitorr/logs</Config>
     <Config Name="Media Volume" Target="/data" Default="" Mode="rw" Description="Add the directory to where your media is stored" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
+
